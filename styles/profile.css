@@ -1,0 +1,296 @@
+/* Estilos para profile.php, alineados con index.css */
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #1a5276;
+    --secondary: #2e86c1;
+    --accent: #f39c12;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--primary);
+    font-size: 32px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 10px auto;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--secondary);
+}
+
+/* Profile Section */
+.profile-section {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.profile-details {
+    margin-bottom: 40px;
+}
+
+.profile-details h3, .order-history h3, .edit-profile h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.edit-profile-btn {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.edit-profile-btn:hover {
+    background-color: #e67e22;
+}
+
+.edit-profile {
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.edit-profile form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary);
+}
+
+.cancel-edit {
+    background-color: #ddd;
+    color: var(--dark);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.cancel-edit:hover {
+    background-color: #ccc;
+}
+
+.order-history {
+    margin-top: 40px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th, .order-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.order-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.order-table td {
+    border-bottom: 1px solid #ddd;
+    color: var(--dark);
+}
+
+.order-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+/* Error and Success Messages */
+.error-messages, .success-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.error-messages {
+    background-color: #ffebee;
+    color: #c0392b;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #27ae60;
+}
+
+.error-messages p, .success-message p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 5px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .profile-details, .edit-profile, .order-history {
+        margin: 20px 0;
+    }
+
+    .order-table th, .order-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .edit-profile form {
+        padding: 20px;
+    }
+}

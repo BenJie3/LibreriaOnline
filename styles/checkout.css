@@ -1,0 +1,284 @@
+/* Estilos para checkout.php, alineados con index.css */
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #1a5276;
+    --secondary: #2e86c1;
+    --accent: #f39c12;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--primary);
+    font-size: 32px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 10px auto;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--secondary);
+}
+
+/* Checkout Section */
+.checkout-section {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.order-summary, .checkout-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.order-summary h3, .checkout-form h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Order Table */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th, .order-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.order-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.order-table td {
+    border-bottom: 1px solid #ddd;
+    color: var(--dark);
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.order-total {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: right;
+    color: var(--dark);
+}
+
+.order-total span {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Form Styles */
+.checkout-form form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.card-details {
+    display: flex;
+    gap: 20px;
+}
+
+.card-details div {
+    flex: 1;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Error and Success Messages */
+.error-messages, .success-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.error-messages {
+    background-color: #ffebee;
+    color: #c0392b;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #27ae60;
+}
+
+.error-messages p, .success-message p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 5px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .checkout-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order-table th, .order-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .card-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
